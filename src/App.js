@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import React, { useContext } from "react";
+import "./App.css";
+import { GitHubContext } from "./context/GitHubContext";
+import SearchBar from "./components/SearchBar";
+import UserProfile from "./components/UserProfile";
+import RepoList from "./components/RepoList";
 
 function App() {
+  const { error, loading } = useContext(GitHubContext);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Mini GitHub Explorer</h1>
+      <SearchBar />
+      {loading && <p>Loading...</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      <UserProfile />
+      <RepoList />
     </div>
   );
 }
