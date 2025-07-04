@@ -1,3 +1,34 @@
+🧩 Mini GitHub Explorer
+A simple React.js app that lets users search for any GitHub username and explore their public profile and repositories. Built as an interview task using modern React practices.
+
+🚀 Features
+🔍 Search GitHub users by username
+
+👤 View user profile: avatar, bio, repo count, GitHub link
+
+📦 List of public repositories
+
+⭐ Sort repositories by stars or name
+
+🔎 Filter repositories by keyword
+
+⚠️ Error handling for:
+
+User not found
+
+No repositories
+
+Network/API errors
+
+📱 Responsive and clean UI
+
+🛠️ Tech Stack
+React.js (with Hooks)
+
+Axios (for API calls)
+
+React Context API (for global state)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
